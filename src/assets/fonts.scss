@@ -1,32 +1,35 @@
-// project fonts
 @font-face {
-  font-family: 'AmesRoman';
-  src: url('../assets/fonts/amesRoman/AmesRoman-Regular.woff') format('woff'),
-    url('../assets/fonts/amesRoman/AmesRoman-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins/Poppins-Light.woff') format('woff'),
-    url('../assets/fonts/Poppins/Poppins-Light.woff2') format('woff2');
+  font-family: 'TT Travels';
+  src: url('../assets/fonts/TTTravels/TTTravels-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins/Poppins-Regular.woff') format('woff'),
-    url('../assets/fonts/Poppins/Poppins-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'TT Travels';
+  src: url('../assets/fonts/TTTravels/TTTravels-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins/Poppins-SemiBold.woff') format('woff'),
-    url('../assets/fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
+  font-family: 'TT Travels';
+  src: url('../assets/fonts/TTTravels/TTTravels-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('../assets/fonts/TTTravels/TTTravels-DemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('../assets/fonts/TTTravels/TTTravels-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+

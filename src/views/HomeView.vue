@@ -1,9 +1,11 @@
-<script setup>
-import TheWelcome from "@/components/TheWelcome.vue";
+<script>
+export default {
+  components: {
+  },
+};
 </script>
 
 <template>
   <main>
-    <TheWelcome />
   </main>
 </template>
