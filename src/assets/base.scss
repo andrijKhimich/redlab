@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-size: 16px;
   font-family: $font-primary;
-  color: $white;
+  color: $textBlack;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
@@ -54,71 +54,60 @@ h6 {
   margin: 0;
   font-weight: normal;
   font-family: $font-primary;
+  color: $textBlack;
 }
 
 h1 {
-  text-transform: uppercase;
-  font-size: 100px;
-  line-height: .8em;
-  letter-spacing: 1px;
-  color: $textBlack;
-  width: fit-content;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 1.1em;
+  margin-bottom: 30px;
+  width: min-content;
 
-  @include d(1440px) {
-    font-size: 90px;
-  }
-
-  @include d(1199px) {
-    font-size: 80px;
+  @include d(1024px) {
+    font-size: 60px;
+    margin-bottom: 20px;
   }
 
   @include d(768px) {
-    font-size: 70px;
-  }
-
-  @include d(575px) {
-    font-size: 60px;
-  }
-
-  @include d(340px) {
     font-size: 50px;
-  }
-}
-
-h2 {
-  line-height: 1em;
-  font-size: 90px;
-  line-height: 1.125em;
-
-  @include d(1440px) {
-    font-size: 80px;
+    width: auto;
   }
 
-  @include d(1024px) {
-    font-size: 60px;
-  }
-
-  @include d(575px) {
-    font-size: 54px;
-  }
-}
-
-h3 {
-  line-height: 1em;
-  font-size: 50px;
-
-  @include d(1024px) {
+  @include d(768px) {
     font-size: 40px;
   }
 }
 
+h2 {
+  font-size: 44px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  @include d(1024px) {
+    font-size: 40px;
+  }
+
+  @include d(768) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.3em;
+
+  @include d(1024px) {
+    font-size: 20px;
+  }
+}
+
 h4 {
-  font-size: 40px;
+  font-size: 22px;
   line-height: 1em;
 }
 
 h5 {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1em;
 }
 
@@ -230,6 +219,12 @@ select {
   appearance: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
 button,
 [type='button'],
 [type='reset'],
@@ -318,12 +313,6 @@ p,
 li {
   line-height: 1.5em;
   margin: 0;
-  font-size: 18px;
-  color: $black;
-
-  @include d(1440px) {
-    font-size: 16px;
-  }
 }
 
 ul,
@@ -438,7 +427,7 @@ section.section {
   padding: 0 15px;
 
   &_lg {
-    max-width: 1350px;
+    max-width: 1360px;
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
