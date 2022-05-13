@@ -17,7 +17,6 @@
 
 <script>
 import { gsap } from "gsap";
-
 export default {
   props: ["text"],
   mounted() {
@@ -25,7 +24,7 @@ export default {
       gsap.to(".js-cta", {
         scrollTrigger: {
           trigger: ".js-cta",
-          markers: true,
+          markers: false,
           toggleActions: "play none none reverse",
           start: "0, 70%",
           end: "100%, 100%",
@@ -39,7 +38,6 @@ export default {
   },
   methods: {
     onMouseEnter(e) {
-      console.log(e.pageX);
       gsap.to("#cta-container", {
         height: 300,
         width: 300,
@@ -71,8 +69,6 @@ export default {
       });
     },
     mouseMove(e) {
-      console.log(e.pageX);
-
       this.callParallax(e);
     },
 
@@ -85,7 +81,6 @@ export default {
       let el = document.getElementById("cta-container");
       let relX = e.pageX / 2 - el.offsetLeft;
       let relY = e.pageY / 2 - el.offsetTop;
-      console.log(((relX - el.offsetWidth / 2) / el.offsetWidth) * movement);
       gsap.to(target, {
         x: ((relX - el.offsetWidth / 2) / el.offsetWidth) * movement,
         y: ((relY - el.offsetHeight / 2) / el.offsetHeight) * movement,

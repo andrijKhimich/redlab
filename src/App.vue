@@ -21,14 +21,6 @@ export default {
   },
   mounted() {
     this.preloaderAnimation();
-    // console.log("App is loaded");
-
-    document.onreadystatechange = () => {
-      if (document.readyState == "complete") {
-        console.log("site loaded");
-        
-      }
-    };
   },
   methods: {
     preloaderAnimation() {

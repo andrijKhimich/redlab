@@ -29,13 +29,6 @@ export default {
       circle,
     };
   },
-  created() {
-    console.log("preloader is created");
-  },
-  mounted() {
-    console.log("preloader is loaded");
-  },
-  methods: {},
 };
 </script>
 

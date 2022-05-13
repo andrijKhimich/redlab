@@ -13,22 +13,6 @@ export default {
     BenefitsSection,
     CleanSection,
   },
-  mounted() {
-    // gsap.from(".js-show-benefits", {
-    //   scrollTrigger: {
-    //     trigger: ".js-show-benefits",
-    //     markers: false,
-    //     toggleActions: "play none none reset",
-    //     start: "0, 100%",
-    //     end: "0, 100%",
-    //   },
-    //   y: 100,
-    //   stagger: 0.1,
-    //   opacity: 0,
-    //   duration: 0.6,
-    // });
-
-  },
 };
 </script>
 

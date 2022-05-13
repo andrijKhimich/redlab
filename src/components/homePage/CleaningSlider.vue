@@ -335,7 +335,6 @@ export default {
               toggleClass: "active",
             },
           });
-          console.log("site loaded");
         }, 1000);
       }
     };
