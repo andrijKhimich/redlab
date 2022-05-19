@@ -24,9 +24,9 @@ export default {
       gsap.to(".js-cta", {
         scrollTrigger: {
           trigger: ".js-cta",
-          markers: false,
+          markers: true,
           toggleActions: "play none none reverse",
-          start: "0, 70%",
+          start: "50%, 70%",
           end: "100%, 100%",
         },
         rotate: 36,
@@ -42,8 +42,10 @@ export default {
         height: 300,
         width: 300,
         duration: 0.3,
+        bottom: 100,
+        // left: 50 + "%",
       });
-      gsap.to(".cta-btn", 0.3, { scale: 1.3 });
+      gsap.to(".cta-btn", { scale: 1.3, duration: 0.3 });
       gsap.to(".cta-btn__border", {
         width: 300,
         height: 300,
@@ -55,6 +57,7 @@ export default {
         height: 250,
         width: 250,
         duration: 0.3,
+        bottom: 0,
       });
       gsap.to(".cta-btn, .cta-btn__text", {
         scale: 1,
@@ -73,17 +76,43 @@ export default {
     },
 
     callParallax(e) {
-      this.parallaxIt(e, ".cta-btn", -40);
-      this.parallaxIt(e, ".cta-btn__text", -10);
+      // this.parallaxBtn(e, ".cta-btn", 80);
+      // this.parallaxText(e, ".cta-btn__text", 40);
+      this.parallaxIt(e, ".cta-btn__text", 40);
+      this.parallaxIt(e, ".cta-btn", 80);
     },
-
     parallaxIt(e, target, movement) {
       let el = document.getElementById("cta-container");
-      let relX = e.pageX / 2 - el.offsetLeft;
-      let relY = e.pageY / 2 - el.offsetTop;
+      let relX = e.pageX / 2 + el.offsetLeft;
+      let relY = e.pageY / 2 + el.offsetTop;
       gsap.to(target, {
-        x: ((relX - el.offsetWidth / 2) / el.offsetWidth) * movement,
-        y: ((relY - el.offsetHeight / 2) / el.offsetHeight) * movement,
+        x:
+          (((relX - el.offsetWidth / 2) / el.offsetWidth) * movement) / 4 + "%",
+        y:
+          (((relY - el.offsetHeight / 2) / el.offsetHeight) * movement) / 4 +
+          "%",
+        ease: "power2.out",
+        duration: 0.3,
+      });
+    },
+    parallaxBtn(e, target, movement) {
+      let el = document.getElementById("cta-container");
+      let relX = e.pageX / 2 + el.offsetLeft;
+      let relY = e.pageY / 2 + el.offsetTop;
+      gsap.to(target, {
+        x: ((relX - el.offsetWidth / 2) / el.offsetWidth) * movement - 100,
+        y: ((relY - el.offsetHeight / 2) / el.offsetHeight) * movement - 100,
+        ease: "power2.out",
+        duration: 0.3,
+      });
+    },
+    parallaxText(e, target, movement) {
+      let el = document.getElementById("cta-container");
+      let relX = e.pageX / 2 + el.offsetLeft;
+      let relY = e.pageY / 2 + el.offsetTop;
+      gsap.to(target, {
+        x: ((relX - el.offsetWidth / 2) / el.offsetWidth) * movement - 50,
+        y: ((relY - el.offsetHeight / 2) / el.offsetHeight) * movement - 100,
         ease: "power2.out",
         duration: 0.3,
       });
@@ -114,6 +143,7 @@ export default {
   justify-content: center;
   width: 250px;
   height: 250px;
+  position: relative;
 }
 .cta-btn {
   text-transform: uppercase;

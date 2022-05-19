@@ -221,13 +221,13 @@ export default {
     width: 0;
     height: 0;
 
-    &:checked + .slider:before {
+    &:checked + .toggler:before {
       content: "Офис";
       -webkit-transform: translateX(69px);
       -ms-transform: translateX(69px);
       transform: translateX(69px);
     }
-    &:checked + .slider:after {
+    &:checked + .toggler:after {
       content: "Дом";
       -webkit-transform: translateX(-66px);
       -ms-transform: translateX(-66px);
